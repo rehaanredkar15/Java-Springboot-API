@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Main.java</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" media="all" href="../../../../../doc-style.css" />
+  <script src="../../../../../doc-filelist.js"></script>
+  <script>
+    var relativeDir = "../../../../../";
+    var thisFile = "src\\main\\java\\com\\rehaanporject\\Main.java";
+    var defaultSidebar = true;
+  </script>
+  <script src="../../../../../doc-script.js"></script>
+
+</head>
+<body>
+  <div id="sidebar_wrapper">
+    <div id="sidebar_switch">
+      <span class="tree">Files</span>
+      <span class="headings">Headings</span>
+    </div>
+    <div id="tree"></div>
+    <div id="headings">
+
+    </div>
+  </div>
+  <div id="sidebar-toggle"></div>
+  <div id="container">
+    <div class="background highlight"></div>
+<table cellpadding="0" cellspacing="0">
+  <tbody>
+    
+      <tr>
+        <td class="docs">
+          <h1>Main.java</h1>
+        </td>
+        <td class="code highlight"></td>
+      </tr>
+    
+    
+      <tr>
+        <td class="docs">
+          <div class="pilwrap">
+  <a class="pilcrow" href="#section-1" id="section-1"></a>
+</div>
+
+        </td>
+        <td class="code highlight">
+          <pre class="java"><span class="hljs-keyword">package</span> com.rehaanporject;
+
+<span class="hljs-keyword">import</span> org.springframework.boot.SpringApplication;
+<span class="hljs-keyword">import</span> org.springframework.boot.autoconfigure.SpringBootApplication;
+<span class="hljs-keyword">import</span> org.springframework.web.bind.annotation.GetMapping;
+<span class="hljs-keyword">import</span> org.springframework.web.bind.annotation.RestController;
+
+<span class="hljs-keyword">import</span> java.util.List;
+
+<span class="hljs-meta">@SpringBootApplication</span>
+<span class="hljs-meta">@RestController</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span></span>{
+        SpringApplication.run(Main<span class="hljs-class">.<span class="hljs-keyword">class</span>,<span class="hljs-title">args</span>)</span>;
+    }
+
+    <span class="hljs-meta">@GetMapping</span>(<span class="hljs-string">"/greet"</span>)
+    <span class="hljs-function"><span class="hljs-keyword">public</span> GreetResponse <span class="hljs-title">greet</span><span class="hljs-params">()</span></span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> GreetResponse(<span class="hljs-string">"Hello"</span>,
+                List.of(<span class="hljs-string">"Java"</span>,<span class="hljs-string">"Golang"</span>,<span class="hljs-string">"Javascript"</span>),
+                <span class="hljs-keyword">new</span> Person(<span class="hljs-string">"Alex"</span>,<span class="hljs-number">21</span>,<span class="hljs-number">50000</span>));
+    }
+
+    <span class="hljs-function">record <span class="hljs-title">Person</span><span class="hljs-params">(String name ,<span class="hljs-keyword">int</span> age, <span class="hljs-keyword">double</span> savings)</span></span>{
+    }
+    <span class="hljs-function">record <span class="hljs-title">GreetResponse</span><span class="hljs-params">( String greet,
+            List&lt;String&gt; favProgrammingLaguages,
+            Person person
+    )</span></span>{
+    }
+}
+
+</pre>
+        </td>
+      </tr>
+    
+  </tbody>
+</table>
+
+  </div>
+</body>
+</html>
